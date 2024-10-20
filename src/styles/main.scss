@@ -1,4 +1,9 @@
 // src/styles/main.scss
+
+@forward './components/Note.scss';
+@forward './components/NotesList';
+@forward './components/NoteForm';
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f7f9fc;
@@ -15,4 +20,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-  
+
+h1 {
+  text-align: center;
+}
