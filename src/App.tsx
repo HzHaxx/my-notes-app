@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 // Components
 import NoteForm from './components/NoteForm';
 import NotesList, { Note } from './components/NotesList';
