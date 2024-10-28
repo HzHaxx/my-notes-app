@@ -1,6 +1,6 @@
 .notes-list {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     gap: 1rem;
 }
   
