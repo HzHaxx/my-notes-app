@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface NoteFormProps {
     onSave: (title: string, content: string) => void;
