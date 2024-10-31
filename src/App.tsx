@@ -18,6 +18,17 @@ function App() {
     setNotes([...notes, newNote]);
   };
 
+  const startEditingNote = (note: Note) => {
+    setEditingNote(note);
+  }
+
+  const updateNote = (id: number, title: string, content: string) => {
+    setNotes(notes.map(note => 
+      note.id === id ? { ...note, title, content } : note
+    ));
+    setEditingNote(null); // Limpia la nota en edición
+  };
+
   const deleteNote = (id: number) => {
     setNotes(notes.filter(note => note.id !== id));
   };
