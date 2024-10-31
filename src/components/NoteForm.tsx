@@ -8,6 +8,13 @@ const NoteForm: React.FC<NoteFormProps> = ({ onSave }) => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
+    useEffect(() => {
+        if (editingNote) {
+          setTitle(editingNote.title);
+          setContent(editingNote.content);
+        }
+    }, [editingNote]);
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
          if (title.trim() === '' || content.trim() === '') {
