@@ -45,7 +45,7 @@ const NoteForm: React.FC<NoteFormProps> = ({ onSave, editingNote }) => {
                 placeholder="content"
             ></textarea>
 
-            <button type="submit">Save Note</button>
+            <button type="submit">{editingNote ? 'Update Note' : 'Add Note'}</button>
         </form>
     )
 }
