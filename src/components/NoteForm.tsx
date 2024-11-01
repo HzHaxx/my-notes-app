@@ -13,6 +13,9 @@ const NoteForm: React.FC<NoteFormProps> = ({ onSave, editingNote }) => {
         if (editingNote) {
           setTitle(editingNote.title);
           setContent(editingNote.content);
+        } else {
+            setTitle('');
+            setContent('');
         }
     }, [editingNote]);
 
