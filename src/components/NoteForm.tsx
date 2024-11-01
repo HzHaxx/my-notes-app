@@ -25,7 +25,7 @@ const NoteForm: React.FC<NoteFormProps> = ({ onSave, editingNote }) => {
             alert('Both fields are required');
             return;
          }
-        onSave(title, content);
+        onSave(editingNote ? editingNote.id : null, title, content);
         setTitle('');
         setContent('');
     }
