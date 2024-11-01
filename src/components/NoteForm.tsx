@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 interface NoteFormProps {
-    onSave: (title: string, content: string) => void;
+    onSave: (id: number | null, title: string, content: string) => void;
+    editingNote: {id: number; title: string; content: string} | null;
 }
 
 const NoteForm: React.FC<NoteFormProps> = ({ onSave }) => {
