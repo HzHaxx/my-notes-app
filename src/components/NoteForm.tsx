@@ -5,7 +5,7 @@ interface NoteFormProps {
     editingNote: {id: number; title: string; content: string} | null;
 }
 
-const NoteForm: React.FC<NoteFormProps> = ({ onSave }) => {
+const NoteForm: React.FC<NoteFormProps> = ({ onSave, editingNote }) => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
