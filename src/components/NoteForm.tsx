@@ -47,7 +47,7 @@ const NoteForm: React.FC<NoteFormProps> = ({ onSave, editingNote }) => {
 
             <button type="submit">{editingNote ? 'Update Note' : 'Add Note'}</button>
         </form>
-    )
+    );
 }
 
 export default NoteForm;
