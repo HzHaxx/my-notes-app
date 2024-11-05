@@ -4,17 +4,19 @@ import { TypeNote } from './NotesList';
 interface NoteProps {
     note: TypeNote;
 
-    onDelete: () => void
+    onDelete: () => void;
+    onEdit: () => void;
 }
 
-const Note: React.FC<NoteProps> = ({ title, content, onDelete }) => {
+const Note: React.FC<NoteProps> = ({ note, onDelete, onEdit }) => {
 
     return (
         <div className="note">
-            <h1>{title}</h1>
-            <p>{content}</p>
+            <h3>{note.title}</h3>
+            <p>{note.content}</p>
 
-            <button className='btnDelete' onClick={() => onDelete()}>Delete</button>
+            <button className='btnDelete' onClick={onEdit}>Edit</button>
+            <button className='btnDelete' onClick={onDelete}>Delete</button>
         </div>
     )
 }
