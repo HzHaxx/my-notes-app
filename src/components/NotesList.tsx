@@ -1,7 +1,7 @@
 import React from "react";
 import Note from "./Note";
 
-export interface Note {
+export interface TypeNote {
     id: number;
     title: string;
     content: string;
