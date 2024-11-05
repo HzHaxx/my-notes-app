@@ -10,6 +10,7 @@ export interface TypeNote {
 interface NotesListProps {
     notes: TypeNote[];
     onDeleteNote: (id: number) => void;
+    onEditNote: (note: TypeNote) => void;
 }
 
 const NotesList: React.FC<NotesListProps> = ({ notes, onDeleteNote }) => {
