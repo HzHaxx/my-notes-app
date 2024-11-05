@@ -1,8 +1,8 @@
 import React from 'react';
+import { TypeNote } from './NotesList';
 
 interface NoteProps {
-    title: string;
-    content: string;
+    note: TypeNote;
 
     onDelete: () => void
 }
