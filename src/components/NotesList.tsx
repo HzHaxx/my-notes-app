@@ -8,7 +8,7 @@ export interface TypeNote {
 }
 
 interface NotesListProps {
-    notes: Note[];
+    notes: TypeNote[];
     onDeleteNote: (id: number) => void;
 }
 
