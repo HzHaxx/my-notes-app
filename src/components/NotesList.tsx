@@ -13,20 +13,20 @@ interface NotesListProps {
     onEditNote: (note: TypeNote) => void;
 }
 
-const NotesList: React.FC<NotesListProps> = ({ notes, onDeleteNote }) => {
+const NotesList: React.FC<NotesListProps> = ({ notes, onDeleteNote, onEditNote }) => {
 
     return (
         <div className="notes-list">
             {notes.map(note => (
                 <Note
                     key={note.id}
-                    title={note.title}
-                    content={note.content}
+                    note={note}
                     onDelete={() => onDeleteNote(note.id)}
+                    onEdit={() => onEditNote(note)}
                 />
             ))}
         </div>
-    )
+    );
 }
 
 export default NotesList;
