@@ -7,7 +7,7 @@ function App() {
   const [notes, setNotes] = useState<TypeNote[]>([]);
   const [editingNote, setEditingNote] = useState<TypeNote | null>(null)
 
-  const addNote = (title: string, content: string) => {
+  const addNote = (id: number | null, title: string, content: string) => {
     const newNote = {
       id: Date.now(),
       title,
@@ -17,7 +17,7 @@ function App() {
     setNotes([...notes, newNote]);
   };
 
-  const startEditingNote = (note: Note) => {
+  const startEditingNote = (note: TypeNote) => {
     setEditingNote(note);
   }
 
