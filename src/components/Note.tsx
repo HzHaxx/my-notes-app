@@ -18,7 +18,7 @@ const Note: React.FC<NoteProps> = ({ note, onDelete, onEdit }) => {
             <button className='btnDelete' onClick={onEdit}>Edit</button>
             <button className='btnDelete' onClick={onDelete}>Delete</button>
         </div>
-    )
+    );
 }
 
 export default Note;
