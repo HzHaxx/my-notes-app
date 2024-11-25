@@ -21,7 +21,7 @@ function App() {
     setEditingNote(note);
   }
 
-  const updateNote = (id: number, title: string, content: string) => {
+  const updateNote = (id: number | null, title: string, content: string) => {
     setNotes(notes.map(note => 
       note.id === id ? { ...note, title, content } : note
     ));
