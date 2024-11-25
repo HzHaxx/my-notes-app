@@ -1,12 +1,11 @@
 import { useState } from 'react';
 // Components
 import NoteForm from './components/NoteForm';
-import NotesList, { Note } from './components/NotesList';
-import { title } from 'process';
+import NotesList, { TypeNote } from './components/NotesList';
 
 function App() {
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [editingNote, setEditingNote] = useState<Note | null>(null)
+  const [notes, setNotes] = useState<TypeNote[]>([]);
+  const [editingNote, setEditingNote] = useState<TypeNote | null>(null)
 
   const addNote = (title: string, content: string) => {
     const newNote = {
